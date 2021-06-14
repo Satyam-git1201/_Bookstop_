@@ -1,0 +1,9 @@
+main {
+    min-height: 80vh
+}
+
+.card-title {
+    height: 2rem;
+    width: '100%';
+    overflow:auto;
+}

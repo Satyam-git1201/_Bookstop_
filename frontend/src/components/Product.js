@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Rating from './Rating'
-
 const styles = {
   card: {
     backgroundColor: '#B7E0F2',
@@ -18,9 +18,9 @@ const styles = {
 const Product = ({ product }) => {
   return (
     <Card className='my-2 p-3 rounded'>
-      <a href={`/product/${product._id}`}>
+      <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant='top' style={styles.cardImage} />
-      </a>
+      </Link>
       <Card.Body>
         <Card.Title as='h4' className='card-title'>
           <strong>{product.name}</strong>

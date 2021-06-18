@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Rating from './Rating'
 const styles = {
   card: {
-    backgroundColor: '#B7E0F2',
+    backgroundColor: '#e0ffff',
     borderRadius: 55,
     padding: '3rem',
   },
@@ -17,7 +17,7 @@ const styles = {
 
 const Product = ({ product }) => {
   return (
-    <Card className='my-2 p-3 rounded'>
+    <Card className='my-2 p-3 rounded' style={styles.card}>
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant='top' style={styles.cardImage} />
       </Link>

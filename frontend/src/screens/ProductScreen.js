@@ -29,7 +29,14 @@ const ProductScreen = ({ match }) => {
         <Col md={4} className='my-2'>
           <ListGroup variant='flush'>
             <ListGroup.Item>
-              <h2>{product.name}</h2>
+              <h2>
+                <strong>{product.name}</strong>
+              </h2>
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <h5>
+                <em>by {product.Author}</em>
+              </h5>
             </ListGroup.Item>
             <ListGroup.Item>
               <Rating
@@ -38,7 +45,7 @@ const ProductScreen = ({ match }) => {
               />
             </ListGroup.Item>
             <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-            <ListGroup.Item>Description: ${product.description}</ListGroup.Item>
+            <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
         </Col>
         <Col md={4} className='my-2'>

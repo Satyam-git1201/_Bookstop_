@@ -105,4 +105,4 @@ const products = [
   },
 ]
 
-module.exports = products //common js format
+export default products

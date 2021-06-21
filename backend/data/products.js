@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'Catcher in the rye',
     image: '/images/catcherintherye.jpg',
     description:
@@ -13,7 +12,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '2',
     name: 'Catch-22',
     image: '/images/catch22.jpg',
     description:
@@ -26,7 +24,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Perks of being a wallflower',
     image: '/images/perks.jpg',
     description:
@@ -39,7 +36,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '4',
     name: 'The fault in our stars',
     image: '/images/thefault.jpg',
     description:
@@ -52,7 +48,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Norwegian Wood',
     image: '/images/norwegianwood.jpg',
     description:
@@ -65,7 +60,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
     name: 'It',
     image: '/images/it.jpg',
     description:
@@ -78,7 +72,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '7',
     name: "The handmaid's tale",
     image: '/images/handmaid.jpg',
     description:
@@ -91,7 +84,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '8',
     name: 'To kill a mockingbird',
     image: '/images/mocking.jpg',
     description:

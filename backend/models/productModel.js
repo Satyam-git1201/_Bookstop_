@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose'
+import mongoose from 'mongoose'
 
 const reviewSchema = mongoose.Schema(
   {
@@ -26,12 +26,12 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    author: {
+    Author: {
       type: String,
       required: true,
     },
-    genre: {
-      type: Boolean,
+    Genre: {
+      type: String,
       required: true,
     },
     description: {

@@ -7,7 +7,7 @@ const Header = () => {
       <Navbar bg='primary' expand='lg' variant='dark' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand>Bookstop</Navbar.Brand>
+            <Navbar.Brand className='logo'>BOOKSTOP</Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>

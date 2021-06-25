@@ -21,6 +21,25 @@ h3 {
     width: 100%;
 }
 
+.linklink:hover {
+  color: rgb(45, 155, 223);
+}
+
+
+
+
+
+
+.logo {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 350;
+    color: rgb(45, 155, 223);
+    font-family: "Arial";
+    letter-spacing: 0.1em;
+    display: block;
+  }
 
 
 

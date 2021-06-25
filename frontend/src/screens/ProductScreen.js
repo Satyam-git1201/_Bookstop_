@@ -36,6 +36,7 @@ const ProductScreen = ({ history, match }) => {
               src={product.image}
               alt={product.name}
               className='imagetag'
+              rounded
             />
           </Col>
           <Col md={5} className='my-2'>
@@ -56,7 +57,7 @@ const ProductScreen = ({ history, match }) => {
                   text={`${product.numReviews} reviews`}
                 />
               </ListGroup.Item>
-              <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+              <ListGroup.Item>Price: ₹{product.price}</ListGroup.Item>
               <ListGroup.Item>
                 Description: {product.description}
               </ListGroup.Item>

@@ -14,10 +14,10 @@ const app = express()
 
 app.use(express.json())
 
-app.use((req, res, next) => {
-  console.log(req.originalUrl)
-  next()
-})
+// app.use((req, res, next) => {
+//   console.log(req.originalUrl)
+//   next()
+// })
 
 app.get('/', (req, res) => {
   res.send('API is running...')

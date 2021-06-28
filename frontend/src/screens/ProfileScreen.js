@@ -3,7 +3,8 @@ import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import { getUserDetails } from '../actions/userActions'
+import { getUserDetails, updateUserProfile } from '../actions/userActions'
+import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 
 const ProfileScreen = ({ location, history }) => {
   const [name, setName] = useState('')
@@ -13,23 +14,30 @@ const ProfileScreen = ({ location, history }) => {
   const [message, setMessage] = useState(null)
 
   const dispatch = useDispatch()
+
   const userDetails = useSelector((state) => state.userDetails)
+  const { loading, error, user } = userDetails
+
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
-  const { loading, error, user } = userDetails
+
+  const userUpdateProfile = useSelector((state) => state.userUpdateProfile)
+  const { success } = userUpdateProfile
 
   useEffect(() => {
     if (!userInfo) {
       history.push('/login')
     } else {
-      if (!user.name) {
+      if (!user || !user.name) {
         dispatch(getUserDetails('profile'))
+      } else if (success) {
+        setTimeout(() => dispatch({ type: USER_UPDATE_PROFILE_RESET }), 3000)
       } else {
         setName(user.name)
         setEmail(user.email)
       }
     }
-  }, [history, userInfo, dispatch, user])
+  }, [history, userInfo, dispatch, user, success])
   const submitHandler = (e) => {
     e.preventDefault()
 
@@ -37,6 +45,7 @@ const ProfileScreen = ({ location, history }) => {
       setMessage('Passwords do not match')
     } else {
       setMessage(null)
+      dispatch(updateUserProfile({ id: user._id, name, email, password }))
     }
   }
   return (
@@ -45,6 +54,7 @@ const ProfileScreen = ({ location, history }) => {
         <h2 className='logo my-3'>USER PROFILE</h2>
         {message && <Message variant='danger'>{message}</Message>}
         {error && <Message variant='danger'>{error}</Message>}
+        {success && <Message variant='success'>Profile updated</Message>}
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId='name'>
@@ -89,7 +99,7 @@ const ProfileScreen = ({ location, history }) => {
         </Form>
       </Col>
       <Col md={9}>
-        <h1 className='logo my-3'>My orders</h1>
+        <h1 className='logo my-3'>MY ORDERS</h1>
       </Col>
     </Row>
   )

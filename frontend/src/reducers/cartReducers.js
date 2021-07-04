@@ -46,7 +46,10 @@ export const cartReducer = (
       }
 
     case USER_LOGOUT:
-      return {}
+      return {
+        cartItems: [],
+        shippingAddress: {},
+      }
 
     default:
       return state

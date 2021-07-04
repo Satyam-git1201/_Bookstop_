@@ -41,6 +41,18 @@ h3 {
     display: block;
   }
 
+  .plorder {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 350;
+    color: rgb(107, 147, 226);
+    font-family: "Arial";
+    letter-spacing: 0.1em;
+
+    display: block;
+  }
+
 
 
  

@@ -39,7 +39,7 @@ export const orderCreateReducer = (state = {}, action) => {
 }
 
 export const orderDetailsReducer = (
-  state = { orderItems: [], shippingAddress: {} },
+  state = { loading: true, order: { orderItems: [], shippingAddress: {} } },
   action
 ) => {
   switch (action.type) {
@@ -59,11 +59,17 @@ export const orderDetailsReducer = (
         error: action.payload,
       }
     case USER_LOGOUT:
-      return {}
+      return {
+        order: { orderItems: [], shippingAddress: {} },
+      }
     case PRODUCT_LIST_REQUEST:
-      return {}
+      return {
+        order: { orderItems: [], shippingAddress: {} },
+      }
     case CART_ADD_ITEM:
-      return {}
+      return {
+        order: { orderItems: [], shippingAddress: {} },
+      }
     default:
       return state
   }

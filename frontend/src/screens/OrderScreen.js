@@ -8,6 +8,7 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getOrderDetails, payOrder } from '../actions/orderActions'
 import { ORDER_PAY_RESET } from '../constants/orderConstants'
+import { emptyCartItems } from '../actions/cartActions'
 
 const OrderScreen = ({ match }) => {
   const orderId = match.params.id
@@ -59,8 +60,8 @@ const OrderScreen = ({ match }) => {
   }, [dispatch, order, orderId, successPay])
 
   const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult)
     dispatch(payOrder(orderId, paymentResult))
+    dispatch(emptyCartItems())
   }
 
   return loading ? (

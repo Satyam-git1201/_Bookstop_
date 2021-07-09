@@ -118,7 +118,9 @@ export const orderListMyReducer = (state = { orders: [] }, action) => {
         error: action.payload,
       }
     case USER_LOGOUT:
-      return {}
+      return {
+        orders: [],
+      }
 
     default:
       return state

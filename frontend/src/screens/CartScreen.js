@@ -61,7 +61,7 @@ const CartScreen = ({ match, location, history }) => {
                     </Link>
                   </Col>
                   <Col md={2}>
-                    <h5 style={{ color: 'rgb(65, 150, 106)' }}>
+                    <h5 style={{ color: 'rgb(228, 243, 247)' }}>
                       ₹{item.price}
                     </h5>
                   </Col>

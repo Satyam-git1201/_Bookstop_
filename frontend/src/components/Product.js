@@ -44,8 +44,9 @@ const Product = ({ product }) => {
         <Card.Text
           as='h4'
           style={{
-            fontFamily: 'cursive',
-            color: 'rgb(97, 167, 151)',
+            fontFamily: 'revert',
+            fontStyle: 'revert',
+            color: 'rgb(228, 243, 247)',
             marginTop: '0.5rem',
           }}
         >

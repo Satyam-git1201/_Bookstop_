@@ -21,6 +21,11 @@ h3 {
     width: 100%;
 }
 
+.linklink {
+  text-decoration: none;
+  color: rgb(228, 243, 247)
+}
+
 .linklink:hover {
   color: rgb(45, 155, 223);
 }

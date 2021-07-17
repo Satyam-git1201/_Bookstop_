@@ -15,6 +15,10 @@ import {
   ORDER_LIST_FAIL,
   ORDER_LIST_SUCCESS,
   ORDER_LIST_REQUEST,
+  ORDER_DELIVER_RESET,
+  ORDER_DELIVER_FAIL,
+  ORDER_DELIVER_SUCCESS,
+  ORDER_DELIVER_REQUEST,
 } from '../constants/orderConstants'
 import { USER_LOGOUT } from '../constants/userConstants'
 import { PRODUCT_LIST_REQUEST } from '../constants/productConstants'
@@ -94,6 +98,33 @@ export const orderPayReducer = (state = {}, action) => {
         error: action.payload,
       }
     case ORDER_PAY_RESET:
+      return {}
+
+    case USER_LOGOUT:
+      return {}
+
+    default:
+      return state
+  }
+}
+
+export const orderDeliverReducer = (state = {}, action) => {
+  switch (action.type) {
+    case ORDER_DELIVER_REQUEST:
+      return {
+        loading: true,
+      }
+    case ORDER_DELIVER_SUCCESS:
+      return {
+        loading: false,
+        success: true,
+      }
+    case ORDER_DELIVER_FAIL:
+      return {
+        loading: false,
+        error: action.payload,
+      }
+    case ORDER_DELIVER_RESET:
       return {}
 
     case USER_LOGOUT:

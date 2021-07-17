@@ -1,6 +1,7 @@
 import express from 'express'
 import multer from 'multer'
 import path from 'path'
+import { protect, admin } from '../middleware/authMiddleware.js'
 import { extname } from 'path'
 const router = express.Router()
 
@@ -36,7 +37,7 @@ const upload = multer({
 })
 
 router.post('/', upload.single('image'), (req, res) => {
-  res.send(`/${req.file.path}`)
+  res.send(`/${req.file.path.replace('\\', '/')}`)
 })
 
 export default router

@@ -22,7 +22,7 @@ import {
 } from '../constants/orderConstants'
 import { USER_LOGOUT } from '../constants/userConstants'
 import { PRODUCT_LIST_REQUEST } from '../constants/productConstants'
-import { CART_ADD_ITEM } from '../constants/cartConstants'
+import { CART_ADD_ITEM, CART_REMOVE_ITEM } from '../constants/cartConstants'
 
 export const orderCreateReducer = (state = {}, action) => {
   switch (action.type) {
@@ -46,6 +46,8 @@ export const orderCreateReducer = (state = {}, action) => {
     case PRODUCT_LIST_REQUEST:
       return {}
     case CART_ADD_ITEM:
+      return {}
+    case CART_REMOVE_ITEM:
       return {}
     default:
       return state

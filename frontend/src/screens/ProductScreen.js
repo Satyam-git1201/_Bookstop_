@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
 import Rating from '../components/Rating'
 import { useSelector, useDispatch } from 'react-redux'
+import Meta from '../components/Meta'
 import {
   listProductDetails,
   createProductReview,
@@ -63,6 +64,7 @@ const ProductScreen = ({ history, match }) => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={3} className='my-2'>
               <Image

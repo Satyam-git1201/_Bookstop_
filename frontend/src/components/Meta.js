@@ -11,7 +11,7 @@ const Meta = ({ title, description, keywords }) => {
 }
 
 Meta.defaultProps = {
-  title: 'Welcome to Bookstop!',
+  title: 'Bookstop.in',
   description: 'Find the best books here at cheap prices',
   keywords: 'books, fiction, buy books',
 }

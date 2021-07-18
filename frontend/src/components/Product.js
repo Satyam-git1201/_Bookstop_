@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Rating from './Rating'
 const styles = {
   card: {
-    backgroundColor: '#731073',
+    backgroundColor: '#2a5169',
     borderRadius: 55,
     padding: '3rem',
   },

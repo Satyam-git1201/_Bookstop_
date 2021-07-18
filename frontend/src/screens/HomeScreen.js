@@ -6,6 +6,7 @@ import Paginate from '../components/Paginate'
 import { listProducts } from '../actions/productActions'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
+import ProductCarousel from '../components/ProductCarousel'
 
 const HomeScreen = ({ match }) => {
   const dispatch = useDispatch()
@@ -19,7 +20,8 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      <h2 className='logo p-1'> LATEST PRODUCTS </h2>
+      {!keyword && <ProductCarousel />}
+      <h2 className='logo p-1 mt-3'> LATEST PRODUCTS </h2>
       {loading ? (
         <Loader />
       ) : error ? (
